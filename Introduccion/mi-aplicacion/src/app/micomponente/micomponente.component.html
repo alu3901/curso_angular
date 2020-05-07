@@ -1,1 +1,24 @@
-<p>micomponente works!</p>
+<div class="contenedor">
+    <div class="carrito" *ngIf="elementosCarrito.length > 0">
+        <ul>
+            <li *ngFor = "let item of elementosCarrito">
+                {{ item.nombre}} - Precio: {{ item.precio }}€
+            </li>
+        </ul>
+    </div>
+    <ng-container  *ngFor="let elemento of listaElementos">
+        <div class="card" *ngIf="!elemento.oculto"
+        [style.backgroundColor]="isInCarrito(elemento) ? '#e0ffda' : 'aliceblue'">
+            <h3>
+                {{elemento.nombre}}
+            </h3>
+            <p class="descripcion">
+                {{elemento.descripcion}}
+            </p>
+            <div class="circulo-precio">
+                <span class="precio">{{elemento.precio}} €</span>
+            </div>
+            <button style="margin-top: 15px" (click)="addCarrito(elemento)">{{isInCarrito(elemento) ? 'Quitar elemento' : 'Añadir elemento' }}</button>
+        </div>
+    </ng-container>
+</div>
