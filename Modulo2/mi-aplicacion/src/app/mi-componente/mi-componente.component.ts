@@ -13,7 +13,7 @@ export class MiComponenteComponent implements OnInit {
 
   constructor() { }
 
-  private addCarrito(elemento: ElementoTienda){
+  public addCarrito(elemento: ElementoTienda){
     //Si un elemento tienen el mismo ID que el nuevo, quitar del array
     const index = this.elementosCarrito.findIndex(el=> el.id == elemento.id);
     if(index != -1){
@@ -23,7 +23,7 @@ export class MiComponenteComponent implements OnInit {
     }
   }
 
-  private isInCarrito(elemento: ElementoTienda){
+  public isInCarrito(elemento: ElementoTienda){
       return this.elementosCarrito.some(e => e.id === elemento.id);
   }
 
