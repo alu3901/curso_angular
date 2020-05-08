@@ -1,0 +1,15 @@
+<p>list-item-picker works!eeeeeeeeeee</p>
+
+<div class="contenedor">
+    <div class="carrito" *ngIf="elementosCarrito.length > 0">
+        <ul>
+            <li *ngFor = "let item of elementosCarrito">
+                {{ item.nombre}} - Precio: {{ item.precio }}€
+            </li>
+        </ul>
+    </div>
+    <app-list-item-picker [list]="listaElementos"></app-list-item-picker>
+</div>
+
+
+
