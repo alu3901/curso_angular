@@ -3,3 +3,4 @@
 <app-view-child></app-view-child>
 <hr style="width:100%;height: 3px;">
 <app-test></app-test>
+<app-tarjeta-ropa *ngFor="let piezaRopa of coleccion" [piezaRopa]="piezaRopa" (addedCarrito)="addedToCarrito($event)"></app-tarjeta-ropa>

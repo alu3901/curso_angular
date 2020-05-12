@@ -7,6 +7,7 @@ import { MiComponenteComponent } from './mi-componente/mi-componente.component';
 import { ViewChildComponent } from './view-child/view-child.component';
 import { TestComponent } from './test/test.component';
 import { Routes, RouterModule } from '@angular/router';
+import { TarjetaRopaComponent } from './tarjeta-ropa/tarjeta-ropa.component';
 
 const routes: Routes = [
   {path:'', component:ViewChildComponent},
@@ -39,7 +40,8 @@ const routes: Routes = [
     AppComponent,
     MiComponenteComponent,
     ViewChildComponent,
-    TestComponent
+    TestComponent,
+    TarjetaRopaComponent
   ],
   imports: [
     BrowserModule,

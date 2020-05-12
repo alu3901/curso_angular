@@ -1,0 +1,15 @@
+.container-wrapper{
+    background-color: aquamarine;
+}
+
+.card{
+    width : 140px;
+    vertical-align: top;
+}
+
+.custom-btn{
+    height: 40px;
+    width: 120px;
+    border-radius: 25px;
+    box-shadow: 1px;
+}
