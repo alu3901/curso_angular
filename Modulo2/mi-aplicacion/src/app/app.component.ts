@@ -9,7 +9,7 @@ import { PiezaRopa } from './interfaces/pieza-ropa';
 })
 export class AppComponent implements OnInit{
   title = 'mi-aplicacion';
-  coleccion: Array<PiezaRopa> = [];
+  collection: Array<PiezaRopa>;
 
   constructor(private ropaService: RopaServiceService ){
 
@@ -19,7 +19,7 @@ export class AppComponent implements OnInit{
     alert("Se ha añadido al carrito : " + piezaRopa.name);
   }
 
-  ngOnInit() {
-   // this.coleccion = this.ropaService.getRopaColeccion();
+  async ngOnInit() {
+    this.collection = await this.ropaService.getRopaColeccion();
   }
 }

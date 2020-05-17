@@ -1,15 +1,22 @@
-.container-wrapper{
-    background-color: aquamarine;
+.card{
+    display: inline-block;
+    height: 530px;
+    width: 180px;
+    border-radius: 10px;
+    margin-left:25px;
+    border: 1px solid lightgray;
+    box-shadow: 1px 1px 2px gray;
+    vertical-align: top;
 }
 
-.card{
-    width : 140px;
-    vertical-align: top;
+.image{
+    width: 100%;
 }
 
 .custom-btn{
     height: 40px;
     width: 120px;
-    border-radius: 25px;
-    box-shadow: 1px;
+    border-radius:25px;
+    box-shadow: 1px 1px 1px lightgray;
+    margin-top:20px;
 }

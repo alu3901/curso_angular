@@ -1,18 +1,16 @@
-<div class="cointaner-wrapper">
-    <p>{{piezaRopa.name}}</p>
-</div>
-
 <div class="card">
     <img class="image" [src]="piezaRopa.img">
     <p>
-        {{piezaRopa.name}}
+        {{ piezaRopa.name }}
     </p>
     <p>
-        Hay <span [style.color]="piezaRopa.stock > 10 ? 'green' : 'orange'">{{piezaRopa.stock}} </span> existencias.
+        {{ piezaRopa.price }} €
     </p>
     <p>
-        Hay <span [style.color]="getStockColor(piezaRopa.stock)">{{piezaRopa.stock}} </span> existencias.
+        Diseñado por {{ piezaRopa.designer }}.
     </p>
-
-    <button (click)="addCarrito(piezaRopa)" class="custom-btn" [disabled] = "piezaRopa.stock == 0"> Añadir a carrito</button>
+    <p>
+        Hay <span [style.color]="getStockColor(piezaRopa.stock)">{{ piezaRopa.stock }}</span> existencias.
+    </p>
+    <button (click)="addtoCarrito(piezaRopa)" class="custom-btn" [disabled]="piezaRopa.stock == 0">Añadir a carrito</button>
 </div>

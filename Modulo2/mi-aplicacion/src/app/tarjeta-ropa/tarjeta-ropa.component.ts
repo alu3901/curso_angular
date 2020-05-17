@@ -17,12 +17,10 @@ export class TarjetaRopaComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addCarrito(piezaRopa: PiezaRopa){
+  addtoCarrito(piezaRopa: PiezaRopa){
     this.addedCarrito.emit(piezaRopa);
   }
-
-
-
+  
   getStockColor(stock: number): string {
     if (stock >= 10) {
       return 'green';
